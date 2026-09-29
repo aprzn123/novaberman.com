@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Nova Berman</title>
+</head>
+
+<body>
+    <header>
+        <a href="/">Nova Berman</a>
+    </header>
+    <nav>
+        <a href="/projects">Projects</a>
+        &nbsp;&bull;&nbsp;
+        <a href="/blog">Blog</a>
+        &nbsp;&bull;&nbsp;
+        <a href="/static/resume.pdf">Resume</a>
+        &nbsp;&bull;&nbsp;
+        <a href="/colophon">Colophon</a>
+    </nav>
+
+    <hr />
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

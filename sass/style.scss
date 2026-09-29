@@ -1,0 +1,60 @@
+:root {
+  --dark1: #0d2b45;
+  --dark2: #203c56;
+  --dark3: #544e68;
+  --dark4: #8d697a;
+  --light1: #ffecd6;
+  --light2: #ffd4a3;
+  --light3: #ffaa5e;
+  --light4: #d08159;
+  background-color: var(--dark2);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --light1: #0d2b45;
+    --light2: #203c56;
+    --light3: #544e68;
+    --light4: #8d697a;
+    --dark1: #ffecd6;
+    --dark2: #ffd4a3;
+    --dark3: #ffaa5e;
+    --dark4: #d08159;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--dark1);
+  color: var(--light1);
+  font-size: 14pt;
+  max-width: 40em;
+  margin: auto;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+a {
+  color: var(--light3);
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+
+header > a {
+  font-size: 36pt;
+  font-weight: 900;
+}
+
+nav {
+  font-size: 24pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+hr {
+  border-color: var(--dark3);
+}
