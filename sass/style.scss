@@ -24,10 +24,14 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  background-color: var(--dark1);
+  font-family: "Roboto Slab", "Lato", sans-serif;
+  background-color: var(--dark2);
   color: var(--light1);
   font-size: 14pt;
+}
+
+.center {
+  background-color: var(--dark1);
   max-width: 40em;
   margin: auto;
   margin-top: 1em;
@@ -47,6 +51,7 @@ header {
 header > a {
   font-size: 36pt;
   font-weight: 900;
+  text-decoration: none !important;
 }
 
 nav {
@@ -55,6 +60,27 @@ nav {
   text-align: center;
 }
 
+nav > a {
+  color: var(--light2);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--light4);
+}
+
 hr {
   border-color: var(--dark3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--light2);
+  font-family: "Lato", sans-serif;
+}
+
+header, nav {
+  font-family: "Lato", sans-serif;
 }

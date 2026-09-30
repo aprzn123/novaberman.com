@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Nova Berman</title>
 </head>
 
 <body>
-    <header>
-        <a href="/">Nova Berman</a>
-    </header>
-    <nav>
-        <a href="/projects">Projects</a>
-        &nbsp;&bull;&nbsp;
-        <a href="/blog">Blog</a>
-        &nbsp;&bull;&nbsp;
-        <a href="/static/resume.pdf">Resume</a>
-        &nbsp;&bull;&nbsp;
-        <a href="/colophon">Colophon</a>
-    </nav>
+    <div class="center">
+        <header>
+            <a href="/">Nova Berman</a>
+        </header>
+        <nav>
+            <a href="/about">About</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/projects">Projects</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/blog">Blog</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/resume.pdf">Resume</a>
+        </nav>
 
-    <hr />
-    
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+        <hr />
+        
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    <footer class="center">
+        <h2>Colophon</h2>
+
+        <p>
+        This website was written with the Zola static site generator, which uses the Tera templating language. The headers are set in Lato by Łukasz Dziedzic, and the body copy in Roboto Slab by Christian Robertson. Both typefaces are sourced from Google Fonts. The color scheme is <a href="https://lospec.com/palette-list/slso8">SLSO8</a> by Luis Miguel Maldonaldo.
+        </p>
+    </footer>
 </body>
 </html>
