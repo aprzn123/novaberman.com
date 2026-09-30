@@ -41,7 +41,9 @@ body {
 
 a {
   color: var(--light3);
-  text-decoration: none;
+  @media (prefers-color-scheme: dark) {
+    text-decoration: none;
+  }
 }
 
 header {
