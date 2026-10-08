@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Nova Berman</title>
+</head>
+
+<body>
+    <div class="center">
+        <header>
+            <a href="/">Nova Berman</a>
+        </header>
+        <nav>
+            <a href="/about">About</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/projects">Projects</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/blog">Blog</a>
+            &nbsp;&bull;&nbsp;
+            <a href="/resume.pdf">Resume</a>
+        </nav>
+
+        <hr />
+        
+        <main>
+            
+<h1>The Third Can</h1>
+<div class="subject">A browser extension that provides a suite of utilities to improve the UX of the Two Cans &amp; String website.</div>
+<p>Built with:</p>
+<ul>
+<li>JavaScript</li>
+<li>HTML/CSS</li>
+<li>Preact</li>
+<li>Rust + Rocket</li>
+</ul>
+<p>Project source: <a rel="external" href="http://github.com/aprzn123/thethirdcan">link</a></p>
+<h1 id="background">Background</h1>
+<p>Two Cans &amp; String is a website where users semi-anonymously ask and answer questions. It's been run by one man named Blake for nearly two decades. The way it works is that as an asker, you can post questions to the board and you'll see answers roll in over time, without visibly attached names. As an answerer, you are fed a randomized feed of questions that others have asked and you can either answer them or skip. I was, for a time, heavily involved in its community, and wanted to give back during a period when the developer was ons a bit of a hiatus.</p>
+<h1 id="development">Development</h1>
+<p>So I developed The Third Can, a collection of utilities meant to address UX issues that people experienced. It was my first time writing a browser extension, and I learned a lot of interesting things about how they work, especially with regards to the specific security boundaries that are put in place.</p>
+<p>In particular, I faced a lot of engineering challenges with regards to the ability to access values within the page's JavaScript environment. The way this is done is by having a separate JavaScript file that, instead of running as part of the extension, is treated as an asset and injected into the DOM <em>by</em> the extension. Since each individual extension feature can be separately enabled/disabled by the user, the overall pipeline goes:</p>
+<ul>
+<li>User loads a page relevant to the extension.</li>
+<li>A script specific to the type of page is launched.</li>
+<li>That script reads the config to determine which features are enabled.</li>
+<li>It injects JavaScript code into &lt;script&gt; tags in the page only for enabled features that are also applicable to that type of page.</li>
+</ul>
+<h1 id="ending">Ending</h1>
+<p>Unfortunately, my timing quite possibly could not have been worse. Mere months after publishing The Third Can, Blake came back with a big update that not only overhauled the look of the site, but was built around a homemade React-like framework and made the entire website client-side rendered. I never had the time to reverse-engineer the framework to find a way to hook into it, but it's still a pipe dream of mine to bring back the extension one day.</p>
+<h1 id="reflection">Reflection</h1>
+<p>Every so often I go back and look at the project's codebase. I get the classic feeling of "why did I do all this? Clearly younger Nova was foolish and overcomplicated everything for no good reason," but when I look deeper and remind myself of all the specific limitations I had to overcome, the need for this structure falls out so clearly. In retrospect I probably could have actually <em>organized</em> the project better (especially if I had added a build step) but that's neither here nor there. I'm proud of my work, and it was useful to the community while it was around.</p>
+
+
+        </main>
+    </div>
+    <footer class="center">
+        <h2>Colophon</h2>
+
+        <p>
+        This website was written with the Zola static site generator, which uses the Tera templating language. The source code can be found on <a href="https://github.com/aprzn123/novaberman.com">GitHub</a>. The headers are set in Lato by Łukasz Dziedzic, and the body copy in Roboto Slab by Christian Robertson. Both typefaces are sourced from Google Fonts. The color scheme is <a href="https://lospec.com/palette-list/slso8">SLSO8</a> by Luis Miguel Maldonaldo.
+        </p>
+    </footer>
+</body>
+</html>
