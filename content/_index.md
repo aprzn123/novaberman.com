@@ -6,7 +6,7 @@ template = "index.html"
 
 Hi! I'm Nova. I graduated from the University of Michigan with a BSE in computer science in May 2026. My current project is figuring out where I go from here. My tentative answer is Philadelpia. If you're in the area and hiring passionate and experienced recent grads, let me know! This is me:
 
-[image placeholder]
+[be patient! the image is on its way...]
 
 You can find contact information and more about me on the [about page](/about).
 

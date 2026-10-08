@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Projects</h1>
+{% for page in section.pages %}
+<section class="project">
+    <div>
+        <h2># <a href="{{page.path}}">{{page.title}}</a> {% if page.extra.old %}(old){% endif %}</h2>
+    {{page.description}}
+    </div>
+</section>
+{% endfor %}
+(This list is incomplete, and will be expanded...)
+{% endblock %}
+

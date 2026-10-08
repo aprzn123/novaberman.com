@@ -1,5 +1,6 @@
 +++
-template="index.html"
+template = "projects.html"
+sort_by = "date"
 +++
 
 (Projects page coming soon!)
